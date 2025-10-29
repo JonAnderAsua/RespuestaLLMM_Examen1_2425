@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>TuNombre TuApellido - Contacto - DAW / DAM / ASI</title>
+  <link rel="icon" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="%23000"/><text x="50" y="60" font-size="60" fill="%23FFD700" text-anchor="middle" font-family="Arial">🎬</text></svg>'>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <div class="page-container">
+
+    <!-- CABECERA -->
+    <header class="cabecera">
+      <div class="cab-box izquierdo">
+        <ol>
+          <li>TuNombre TuApellido</li>
+          <li>DAW / DAM / ASI</li>
+          <li>Lenguaje de marcas</li>
+        </ol>
+      </div>
+
+      <div class="cab-box central">
+        <img src="https://i.pinimg.com/736x/42/0f/48/420f48c1bf2c1d29b648bc0078929f94.jpg" alt="Logo cine" />
+      </div>
+
+      <div class="cab-box derecho">
+        <ol>
+          <li>C/Río Guadiana, 1</li>
+          <li>Ciudad Educativa</li>
+          <li>28000 - Madrid</li>
+        </ol>
+      </div>
+    </header>
+
+    <!-- MENU -->
+    <nav class="menu">
+      <ul class="menu-lista">
+        <li><a href="index.html">Página principal</a></li>
+        <li><a href="https://www.google.com" target="_blank" rel="noopener">Historia</a></li>
+        <li><a href="cartelera.html">Cartelera</a></li>
+      </ul>
+    </nav>
+
+    <main class="contenido">
+      <h2 class="titulo-cartelera">Formulario de contacto</h2>
+
+      <form class="form-contacto" action="#" method="post" novalidate>
+        <label for="nombre">Nombre y apellidos *</label>
+        <input id="nombre" name="nombre" type="text" required placeholder="Tu nombre completo">
+
+        <label for="email">Email *</label>
+        <input id="email" name="email" type="email" required placeholder="ejemplo@correo.com">
+
+        <fieldset>
+          <legend>¿Vives en el municipio?</legend>
+          <label><input type="radio" name="municipio" value="si" required> Sí</label>
+          <label><input type="radio" name="municipio" value="no"> No</label>
+        </fieldset>
+
+        <fieldset>
+          <legend>¿Qué película has visto? (puede seleccionar varias)</legend>
+          <label><input type="checkbox" name="pelicula" value="cinema"> Cinema Paradiso</label>
+          <label><input type="checkbox" name="pelicula" value="centauros"> Centauros del Desierto</label>
+          <label><input type="checkbox" name="pelicula" value="aycarmela"> Ay Carmela</label>
+          <label><input type="checkbox" name="pelicula" value="manfromearth"> El hombre de la tierra</label>
+        </fieldset>
+
+        <label for="asunto">Asunto</label>
+        <input id="asunto" name="asunto" type="text" placeholder="Asunto del mensaje">
+
+        <label for="mensaje">Mensaje</label>
+        <textarea id="mensaje" name="mensaje" rows="6" placeholder="Escribe aquí tu mensaje"></textarea>
+
+        <div class="boton-centro">
+          <button type="submit">Enviar mensaje</button>
+        </div>
+      </form>
+
+    </main>
+
+    <footer class="pie">
+      <p>© Cine Escolar - TuNombre TuApellido</p>
+    </footer>
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,229 @@
+/* Reset muy sencillo */
+* { box-sizing: border-box; margin: 0; padding: 0; font-family: Arial, Helvetica, sans-serif; }
+
+/* BODY */
+body {
+  background: blue;              /* fondo de la página: blue */
+  padding: 20px;
+}
+
+/* Contenedor principal de toda la web (90% ancho, centrado) */
+.page-container {
+  width: 90%;
+  margin: 0 auto;               /* centrado */
+  background: yellow;           /* color de fondo: yellow */
+  border: 3px solid #333;
+  padding: 10px;
+  min-height: 80vh;
+}
+
+/* CABECERA */
+.cabecera {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: black;            /* fondo negro */
+  padding: 10px;
+  margin-bottom: 12px;
+}
+
+.cab-box {
+  padding: 8px;
+  color: white;
+}
+
+/* cajas izquierda y derecha: lista ordenada, borde discontinuo azul */
+.cab-box.izquierdo ol,
+.cab-box.derecho ol{
+  list-style-position: inside;
+  color: white;
+  border: 2px dashed blue;
+  padding: 8px;
+}
+
+/* caja central: imagen */
+.cab-box.central img {
+  display: block;
+  max-height: 80px;
+  max-width: 220px;
+  object-fit: contain;
+  margin: 0 auto;
+}
+
+/* MENU sin formato y hover produce texto amarillo */
+.menu {
+  margin: 12px 0;
+}
+
+.menu-lista {
+  list-style: none;
+  display: flex;
+  gap: 16px;
+}
+
+.menu-lista li a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  padding: 6px 8px;
+}
+
+.menu-lista li a:hover {
+  color: yellow;   /* al pasar el ratón texto amarillo */
+}
+
+/* CONTENIDO PRINCIPAL */
+.contenido {
+  padding: 10px;
+}
+
+/* TITULOS */
+.titulo-cartelera {
+  text-decoration: underline;
+  text-decoration-color: yellow;
+  background: blue;
+  color: white;
+  width: 90%;
+  margin: 0 auto 12px auto;
+  padding: 8px;
+  text-align: center;
+}
+
+/* GRID CARTELERA - usar flexbox para márgenes iguales y tamaño imágenes */
+.grid-cartelera {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+/* cada tarjeta */
+.pelicula {
+  width: 200px;
+}
+
+/* imagen con overlay que aparece al hover */
+.img-wrap {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  border: 2px solid #ccc;
+  background: #eee;
+}
+
+.img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;  /* asegura mismo tamaño visual */
+  display: block;
+}
+
+/* overlay oculto por defecto */
+.img-wrap .overlay {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.7);
+  color: white;
+  padding: 8px;
+  text-align: center;
+  transform: translateY(100%);
+  transition: transform 0.25s ease;
+  font-weight: bold;
+}
+
+/* al pasar el ratón: aparece el título */
+.img-wrap:hover .overlay {
+  transform: translateY(0);
+}
+
+/* Tabla tarifas (index.html) */
+.tabla-tarifas {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 12px;
+}
+
+.tabla-tarifas thead th {
+  font-weight: bold;
+  text-decoration: underline;
+  font-style: italic;
+  text-align: center;
+  background: coral;
+  padding: 8px;
+}
+
+.tabla-tarifas tbody td {
+  background: lightcoral;
+  padding: 8px;
+  text-align: left;
+}
+
+/* Tabla horarios y subtabla */
+.tabla-horarios, .tabla-horarios th, .tabla-horarios td, .subtabla {
+  border: 1px solid #999;
+  border-collapse: collapse;
+}
+
+.tabla-horarios thead th {
+  font-weight: bold;
+  text-decoration: underline;
+  text-align: center;
+  padding: 6px;
+}
+
+.tabla-horarios td {
+  padding: 6px;
+  text-align: left; /* margen a la izquierda por padding */
+}
+
+/* FORMULARIO contacto */
+.form-contacto {
+  max-width: 700px;
+  margin: 0 auto;
+  display: grid;
+  gap: 10px;
+}
+
+.form-contacto label { font-weight: bold; }
+.form-contacto input[type="text"],
+.form-contacto input[type="email"],
+.form-contacto textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #666;
+  border-radius: 4px;
+}
+
+.form-contacto fieldset {
+  border: 1px solid #999;
+  padding: 8px;
+}
+
+.form-contacto .boton-centro {
+  text-align: center;
+  margin-top: 6px;
+}
+
+.form-contacto button {
+  padding: 8px 16px;
+  border: none;
+  background: #333;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.form-contacto button:hover {
+  opacity: 0.9;
+}
+
+/* pie */
+.pie {
+  margin-top: 16px;
+  text-align: center;
+  font-size: 0.9rem;
+}
